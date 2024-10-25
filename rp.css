@@ -1,0 +1,188 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+header {
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.resume-container {
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px 15%;
+    border-radius: 8px;
+    color: black;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .section {
+        margin: 10px;
+    }
+}
+/* Style for the next page arrow */
+.next-page-arrow,
+.previous-page-arrow {
+    position: fixed;
+    bottom: 20px;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    background-color: #46B1C9;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.next-page-arrow {
+    right: 20px;
+}
+
+.previous-page-arrow {
+    left: 20px;
+}
+
+.next-page-arrow:hover,
+.previous-page-arrow:hover {
+    transform: scale(1.1);
+}
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+body {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    background-size: cover;
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+}
+
+@keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+
+}
+
+
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(75, 75, 250, 0.3);
+    border-radius: 3px;
+}
+
+.center h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+}
+/* Base styles for navigation links */
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Optionally, you can add hover effects */
+.nav-link:hover::after {
+    width: 100%;
+}
+/* Button press effect */
+.nav-link.active {
+    transform: translateY(2px);
+}
